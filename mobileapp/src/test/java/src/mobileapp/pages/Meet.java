@@ -156,7 +156,7 @@ public class Meet extends base {
 		return returncount2;
 	}
 	
-	public void createmeeting(String topic,String audience) {
+	public void createmeeting(String topic,String audience) throws InterruptedException {
 		
 		/*testutil.explicit(favicon);
 		favicon.click();
@@ -164,22 +164,24 @@ public class Meet extends base {
 		meet.click();*/
 		testutil.explicit(selectseries);
 		selectseries.click();
-		testutil.javascriptclick(selectseries);
+		//testutil.javascriptclick(selectseries);
 		testutil.explicit(addmeeting);
-		testutil.javascriptclick(addmeeting);
+		addmeeting.click();
 		testutil.explicit(choosetopic);
-		testutil.javascriptclick(choosetopic);
+		choosetopic.click();
 		testutil.explicit(typetopic);
 		typetopic.sendKeys(topic);
 		testutil.explicit(selecttopic);
 		selecttopic.click();
 		testutil.explicit(targetaudience);
-		testutil.javascriptclick(targetaudience);
+		targetaudience.click();
+		Thread.sleep(1000);
 		testutil.androidscroll();
+		testutil.explicit(targetaudience);
 		AndroidElement taudience=driver.findElement(By.xpath("//*[@text='"+audience+"']"));
 		taudience.click();
 		testutil.explicit(attendies);
-		testutil.javascriptclick(selectattendies);
+		attendies.click();
 		
 	}
 

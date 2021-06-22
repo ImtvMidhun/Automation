@@ -51,7 +51,7 @@ public class meettest extends base {
 		return data2;
 	}
 	
-	@Test(dataProvider="getdata",priority=1)
+	@Test(dataProvider="getdata",priority=1,enabled=false)
 	
 	public void signin(String username,String password,String meettype1,String name,String topic) throws InterruptedException {
 		
