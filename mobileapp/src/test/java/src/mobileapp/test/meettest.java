@@ -47,7 +47,7 @@ public class meettest extends base {
 	@DataProvider
 	public String[][] getdata1() throws IOException {
 	
-		data2=testutil.gettestdata(sheet2,1,6);
+		data2=testutil.gettestdata(sheet2,1,4);
 		return data2;
 	}
 	
@@ -71,10 +71,10 @@ public class meettest extends base {
 	}
 	
 	@Test(dataProvider="getdata1",priority=2) 	
-		public void createmeeting(String username,String password,String topic,String audience,String timezone,String about) throws InterruptedException {
+		public void createmeeting(String topic,String audience,String timezone,String about) throws InterruptedException {
 		
 		//obj2.logindata(username, password);
-		obj.createmeeting(topic, audience);
+		obj.createmeeting(topic, audience,timezone,about);
 		
 	}
 	

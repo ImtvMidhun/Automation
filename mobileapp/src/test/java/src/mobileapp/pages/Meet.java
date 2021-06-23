@@ -96,6 +96,14 @@ public class Meet extends base {
 	@AndroidFindBy(xpath="//*[@text='My Meetups']")
 	AndroidElement seriestab;
 	
+	@AndroidFindBy(xpath="//*[@text='24']")
+	AndroidElement date;
+	
+	@AndroidFindBy(xpath="//*[@text='OK']")
+	AndroidElement ok;
+	
+	
+	
 	
 
 	
@@ -161,7 +169,7 @@ public class Meet extends base {
 		return returncount2;
 	}
 	
-	public void createmeeting(String topic,String audience) throws InterruptedException {
+	public void createmeeting(String topic,String audience,String timezone1,String about1) throws InterruptedException {
 		
 		/*testutil.explicit(favicon);
 		favicon.click();
@@ -186,14 +194,36 @@ public class Meet extends base {
 		TouchAction touch =new TouchAction(driver);
 		touch.press(PointOption.point(678,1248)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(2000))).moveTo(PointOption.point(662,1059)).release().perform();
 		touch.press(PointOption.point(710,1291)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(2000))).moveTo(PointOption.point(681,1040)).release().perform();
-		
-		//driver.swipe(540, 1213, 529, 1021, 246);
 
-		//driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(taudience));");
 		AndroidElement taudience=driver.findElement(By.xpath("//*[@text='"+audience+"']"));
 		taudience.click();
 		testutil.explicit(attendies);
 		attendies.click();
+		testutil.explicit(selectattendies);
+		selectattendies.click();
+		testutil.explicit(dateselect);
+		dateselect.click();
+		testutil.explicit(date);
+		date.click();
+		testutil.explicit(ok);
+		ok.click();
+		testutil.explicit(ok);
+		ok.click();
+		testutil.explicit(timezone);
+		timezone.click();
+		testutil.explicit(searchtimezone);
+		searchtimezone.sendKeys(timezone1);
+		testutil.explicit(selecttimezone);
+		selecttimezone.click();
+		testutil.explicit(about);
+		about.sendKeys(about1);
+		testutil.explicit(publish);
+		publish.click();
+		Thread.sleep(4000);
+		
+		
+		
+		
 		
 	}
 

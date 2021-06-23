@@ -71,17 +71,7 @@ public class testutil extends base{
 	
 	@SuppressWarnings("rawtypes")
 	public static void androidscroll() { 
-		/*Dimension dimensions = driver.manage().window().getSize(); 
-		System.out.println(dimensions); 
-		//int startx=dimensions.getWidth()/2; 
-		Double screenHeightStart = dimensions.getHeight() * 0.5; 
-		int starty = screenHeightStart.intValue(); 
-		//System.out.println(scrollStart);
-		Double screenHeightEnd = dimensions.getHeight() * 0.2;
-		int endy = screenHeightEnd.intValue(); */
-		//System.out.println(scrollEnd);
-		//driver.swipe(startx, starty, startx, endy, 1000);
-		//@SuppressWarnings("rawtypes")
+
 		TouchAction touch =new TouchAction(driver);
 		touch.press(PointOption.point(667,2514)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(2000))).moveTo(PointOption.point(653,1432)).release().perform();
 		touch.press(PointOption.point(672,2048)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(2000))).moveTo(PointOption.point(732,1144)).release().perform();
