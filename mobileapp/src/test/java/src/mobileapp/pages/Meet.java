@@ -3,13 +3,18 @@ package src.mobileapp.pages;
 
 
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 import src.mobileapp.base.base;
 import src.mobileapp.utility.testutil;
 
@@ -175,9 +180,16 @@ public class Meet extends base {
 		selecttopic.click();
 		testutil.explicit(targetaudience);
 		targetaudience.click();
-		Thread.sleep(1000);
-		testutil.androidscroll();
-		testutil.explicit(targetaudience);
+		//Thread.sleep(3000);
+		//testutil.androidscroll();
+		@SuppressWarnings("rawtypes")
+		TouchAction touch =new TouchAction(driver);
+		touch.press(PointOption.point(678,1248)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(2000))).moveTo(PointOption.point(662,1059)).release().perform();
+		touch.press(PointOption.point(710,1291)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(2000))).moveTo(PointOption.point(681,1040)).release().perform();
+		
+		//driver.swipe(540, 1213, 529, 1021, 246);
+
+		//driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(taudience));");
 		AndroidElement taudience=driver.findElement(By.xpath("//*[@text='"+audience+"']"));
 		taudience.click();
 		testutil.explicit(attendies);
