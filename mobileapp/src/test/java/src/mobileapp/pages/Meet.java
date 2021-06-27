@@ -3,6 +3,8 @@ package src.mobileapp.pages;
 
 
 
+
+
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -15,6 +17,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
+
 import src.mobileapp.base.base;
 import src.mobileapp.utility.testutil;
 
@@ -101,6 +104,11 @@ public class Meet extends base {
 	
 	@AndroidFindBy(xpath="//*[@text='OK']")
 	AndroidElement ok;
+	
+	@AndroidFindBy(xpath="//*[@text='My Meetups']")
+	AndroidElement mymeetup;
+	
+	
 	
 	
 	
@@ -219,7 +227,9 @@ public class Meet extends base {
 		about.sendKeys(about1);
 		testutil.explicit(publish);
 		publish.click();
-		Thread.sleep(4000);
+		testutil.explicit(mymeetup);
+		
+		
 		
 		
 		
