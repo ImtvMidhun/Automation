@@ -1,4 +1,4 @@
-package com.interview.pages;
+package com.sample.pages;
 
 import java.applet.AppletStub;
 import java.awt.AWTException;
@@ -13,8 +13,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.interview.base.base;
-import com.interview.testutil.testutil;
+import com.sample.base.base;
+import com.sample.testutil.testutil;
 
 public class login extends base{
 	

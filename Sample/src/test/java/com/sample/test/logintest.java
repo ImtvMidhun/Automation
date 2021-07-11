@@ -1,4 +1,4 @@
-package com.interview.test;
+package com.sample.test;
 
 
 
@@ -10,9 +10,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.interview.base.base;
-import com.interview.pages.login;
-import com.interview.testutil.testutil;
+import com.sample.base.base;
+import com.sample.pages.login;
+import com.sample.testutil.testutil;
 
 public class logintest extends base {
 	
