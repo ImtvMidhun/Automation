@@ -1,5 +1,6 @@
 package Pages;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.collections4.map.HashedMap;
@@ -11,12 +12,14 @@ public class postdata {
 	public JSONObject bodydata() {
 		
 		JSONObject convert;
-		Map<String, Object> insert=new HashedMap<String, Object>(); {
+		Map<String, Object> insert=new HashMap<String, Object>(); {
 			
 			insert.put("email", "eve.holt@reqres.in");
 			insert.put("password","pistol");
 			
 			 convert=new JSONObject(insert);
+			 
+			 
 			 
 			 
 

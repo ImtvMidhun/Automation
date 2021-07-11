@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-07-10T09:48:23 IST" name="Default suite" finished-at="2021-07-10T09:48:35 IST" duration-ms="11678">
+    <groups>
+    </groups>
+    <test started-at="2021-07-10T09:48:23 IST" name="Default test" finished-at="2021-07-10T09:48:35 IST" duration-ms="11678">
+      <class name="com.interview.test.logintest">
+        <test-method is-config="true" signature="beforedata()[pri:0, instance:com.interview.test.logintest@3d1cfad4]" started-at="2021-07-10T09:48:23 IST" name="beforedata" finished-at="2021-07-10T09:48:28 IST" duration-ms="4394" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforedata -->
+        <test-method signature="logindata(java.lang.String, java.lang.String)[pri:0, instance:com.interview.test.logintest@3d1cfad4]" started-at="2021-07-10T09:48:28 IST" name="logindata" data-provider="getdata2" finished-at="2021-07-10T09:48:28 IST" duration-ms="569" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[8.086164886E9]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Imtv@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logindata -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:com.interview.test.logintest@3d1cfad4]" started-at="2021-07-10T09:48:28 IST" name="quit" finished-at="2021-07-10T09:48:28 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="beforedata()[pri:0, instance:com.interview.test.logintest@3d1cfad4]" started-at="2021-07-10T09:48:28 IST" name="beforedata" finished-at="2021-07-10T09:48:31 IST" duration-ms="3041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforedata -->
+        <test-method signature="seconddata()[pri:0, instance:com.interview.test.logintest@3d1cfad4]" started-at="2021-07-10T09:48:31 IST" name="seconddata" finished-at="2021-07-10T09:48:35 IST" duration-ms="3521" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seconddata -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:com.interview.test.logintest@3d1cfad4]" started-at="2021-07-10T09:48:35 IST" name="quit" finished-at="2021-07-10T09:48:35 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.interview.test.logintest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

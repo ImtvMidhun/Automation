@@ -20,6 +20,7 @@ import Pages.postdata;
 import io.restassured.RestAssured;
 import io.restassured.http.Headers;
 import io.restassured.http.Method;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
@@ -124,7 +125,7 @@ public class apitesting {
 		
 	}
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void register() throws UnsupportedEncodingException {
 		
 
@@ -152,7 +153,30 @@ public class apitesting {
 		Assert.assertEquals(200, statuscode2);
 		value2.prettyPrint();
 		
-		System.out.println("token is "+value2.path("token"));
+		System.out.println("token is "+value2.path("token"));   
+		
+	}
+	
+	@Test
+	public void getsomedata() {
+		
+		
+		RequestSpecification rmt=RestAssured.given().baseUri("http://reqres.in").header("Content-Type","application/json");
+		
+		Response data=rmt.request(Method.GET,"/api/unknown/2");
+		
+		//String convert=data.getBody().asString();
+		
+		JsonPath ext=data.getBody().jsonPath();
+		
+		//String taken=data.getBody().prettyPrint();
+		
+		System.out.println(ext.get("data.id"));
+		
+		//JsonPath mn=ext.get("data");
+		
+		//System.out.println(mn.get("id"));
+		
 		
 	}
 
